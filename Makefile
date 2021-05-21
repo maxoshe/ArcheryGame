@@ -16,11 +16,11 @@ all: obj $(APP)
 obj:
 	mkdir obj
 
-# compile source code to object files
+# link object files to Executable
 $(APP): $(OBJS)
 	$(CXX) $(CXXFLANGS) $^ -o $@
 
-# link object files to Executable
+# compile source code to object files
 obj/%.o: src/%.cpp
 	$(CXX) $(CXXFLANGS) -c $^ -o $@
 
